@@ -1,0 +1,36 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Generated coverage
+lib-cov
+coverage
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+node_modules
