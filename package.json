@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/danethurber/express-manifest-helpers/issues"
   },
-  "homepage": "https://github.com/danethurber/express-manifest-helpers"
+  "homepage": "https://github.com/danethurber/express-manifest-helpers",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.14.1"
+  },
+  "dependencies": {
+    "babel": "^5.4.7",
+    "lodash": "^3.9.1"
+  }
 }
