@@ -32,6 +32,14 @@ describe('#imageTag', function(){
     expect(result).to.equal(expected)
   })
 
+  it('accepts html attributes as second arg', function(){
+    let source = 'image.png'
+    let result = imageTag(source, { 'data-one': '1', 'data-two': '2' })
+    let expected = `<img src="${manifest[source]}" data-one="1" data-two="2" />`
+
+    expect(result).to.equal(expected)
+  })
+
   it('handles malformed input', function(){
     let expected = '<img src="" />'
     expect(imageTag('missing-file.js')).to.equal(expected)

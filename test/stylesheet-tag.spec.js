@@ -32,6 +32,14 @@ describe('#stylesheetTag', function(){
     expect(result).to.equal(expected)
   })
 
+  it('accepts html attributes as second arg', function(){
+    let source = 'style.css'
+    let result = stylesheetTag(source, { 'data-one': '1', 'data-two': '2' })
+    let expected = `<link rel="${manifest[source]}" data-one="1" data-two="2" />`
+
+    expect(result).to.equal(expected)
+  })
+
   it('handles malformed input', function(){
     let expected = '<link rel="" />'
 

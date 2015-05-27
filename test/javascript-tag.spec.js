@@ -32,6 +32,14 @@ describe('#javascriptTag', function(){
     expect(result).to.equal(expected)
   })
 
+  it('accepts html attributes as second arg', function(){
+    let source = 'script.js'
+    let result = javascriptTag(source, { 'data-one': '1', 'data-two': '2' })
+    let expected = `<script src="${manifest[source]}" data-one="1" data-two="2"></script>`
+
+    expect(result).to.equal(expected)
+  })
+
   it('handles malformed input', function(){
     let expected = '<script src=""></script>'
 
