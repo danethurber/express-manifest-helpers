@@ -38,6 +38,13 @@ html(lang="en")
 
 ```
 
+Helpers can also output html attrs
+
+```jade
+!= imageTag('logo.png', { width: 120, height: 120 })
+// <img src="logo.png" width="120" height="120" />
+```
+
 Disable the cache for development
 
 ```js
@@ -62,8 +69,8 @@ app.use(manifestHelpers({
 
 `assetPath(source)` - returns the path to the provided source
 
-`imageTag(source)` - return a img tag for the source provided
+`imageTag(source, attrs)` - return a img tag for the source provided
 
-`javascriptTag(source)` - return a script tag for the source provided
+`javascriptTag(source, attrs)` - return a script tag for the source provided
 
-`stylesheetTag(source)` - return a link tag for the source provided
+`stylesheetTag(source, attrs)` - return a link tag for the source provided
