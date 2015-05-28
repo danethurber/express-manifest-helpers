@@ -1,7 +1,7 @@
 import {expect} from 'chai'
 import sinon from 'sinon'
 
-import manifestHelpers from '../lib'
+import manifestHelpers from '../src'
 
 describe('manifestHelpers', function() {
   it('exists', function() {

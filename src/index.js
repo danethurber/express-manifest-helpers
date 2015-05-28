@@ -20,6 +20,15 @@ function mapAttrs(attrs) {
   return Object.keys(attrs).map(key => `${key}="${attrs[key]}"` ).join(' ')
 }
 
+export function lookup(source) {
+  manifest = loadManifest()
+
+  if(manifest[source])
+    return path.join(options.prependPath, manifest[source])
+  else
+    return ''
+}
+
 export function trimTag(str){
   return str
     // replace double spaces not inside quotes
@@ -28,15 +37,6 @@ export function trimTag(str){
     .replace(/ >/, '>')
     // replace extra space in self closing tags
     .replace(/  \/>/, ' />')
-}
-
-export function lookup(source) {
-  manifest = loadManifest()
-
-  if(manifest[source])
-    return path.join(options.prependPath, manifest[source])
-  else
-    return ''
 }
 
 export function assetPath(source) {

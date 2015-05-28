@@ -3,8 +3,8 @@ import fs from 'fs'
 import {expect} from 'chai'
 import sinon from 'sinon'
 
-import manifestHelpers from '../lib'
-import { javascriptTag } from '../lib'
+import manifestHelpers from '../src'
+import { javascriptTag } from '../src'
 
 describe('#javascriptTag', function(){
   const manifestPath = 'some/path/manifest.json'

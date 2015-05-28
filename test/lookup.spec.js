@@ -3,8 +3,8 @@ import fs from 'fs'
 import {expect} from 'chai'
 import sinon from 'sinon'
 
-import manifestHelpers from '../lib'
-import {lookup} from '../lib'
+import manifestHelpers from '../src'
+import {lookup} from '../src'
 
 describe('#lookup', function(){
   const manifestPath = 'some/path/manifest.json'
