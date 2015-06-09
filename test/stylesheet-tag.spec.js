@@ -27,7 +27,7 @@ describe('#stylesheetTag', function(){
   it('returns an link tag to the proper file', function(){
     let source = 'style.css'
     let result = stylesheetTag(source)
-    let expected = `<link rel="${manifest[source]}" />`
+    let expected = `<link rel="stylesheet" href="${manifest[source]}" />`
 
     expect(result).to.equal(expected)
   })
@@ -35,13 +35,13 @@ describe('#stylesheetTag', function(){
   it('accepts html attributes as second arg', function(){
     let source = 'style.css'
     let result = stylesheetTag(source, { 'data-one': '1', 'data-two': '2' })
-    let expected = `<link rel="${manifest[source]}" data-one="1" data-two="2" />`
+    let expected = `<link rel="stylesheet" href="${manifest[source]}" data-one="1" data-two="2" />`
 
     expect(result).to.equal(expected)
   })
 
   it('handles malformed input', function(){
-    let expected = '<link rel="" />'
+    let expected = '<link rel="stylesheet" href="" />'
 
     expect(stylesheetTag('missing-file.js')).to.equal(expected)
     expect(stylesheetTag(123)).to.equal(expected)

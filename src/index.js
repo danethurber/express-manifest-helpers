@@ -52,7 +52,7 @@ export function javascriptTag(source, attrs={}) {
 }
 
 export function stylesheetTag(source, attrs={}) {
-  return trimTag(`<link rel="${lookup(source)}" ${mapAttrs(attrs)} />`)
+  return trimTag(`<link rel="stylesheet" href="${lookup(source)}" ${mapAttrs(attrs)} />`)
 }
 
 export default function(opts) {
