@@ -95,5 +95,15 @@ describe('#lookup', function(){
 
       expect(result).to.equal(prependPath + manifest[source])
     })
+
+    it('properly resolves urls', function(){
+      let source = 'app.js'
+      let prependPath = '//some/path/'
+      manifestHelpers({ manifestPath, prependPath })
+
+      let result = lookup(source)
+
+      expect(result).to.equal('//some/path/' + manifest[source])
+    })
   })
 })

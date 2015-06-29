@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import url from 'url'
 import assign from 'lodash/object/assign'
 
 var manifest
@@ -24,7 +24,7 @@ export function lookup(source) {
   manifest = loadManifest()
 
   if(manifest[source])
-    return path.join(options.prependPath, manifest[source])
+    return url.resolve(options.prependPath, manifest[source])
   else
     return ''
 }
