@@ -97,6 +97,13 @@ export default function(opts) {
   assign(options, defaults, opts)
 
   return function(req, res, next) {
+    res.locals.getSources = getSources
+    res.locals.getStylesheetSources = getStylesheetSources
+    res.locals.getStylesheets = getStylesheets
+    res.locals.getJavascriptSources = getJavascriptSources
+    res.locals.getJavascripts = getJavascripts
+    res.locals.getImageSources = getImageSources
+    res.locals.getImages = getImages
     res.locals.getManifest = getManifest
     res.locals.assetPath = assetPath
     res.locals.imageTag = imageTag
