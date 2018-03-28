@@ -74,3 +74,19 @@ app.use(manifestHelpers({
 `javascriptTag(source, attrs)` - return a script tag for the source provided
 
 `stylesheetTag(source, attrs)` - return a link tag for the source provided
+
+`getManifest()` - returns the original manifest file for convenience
+
+`getSources()` - returns a list of sources from the manifest
+
+`getStylesheetSources()` - returns a list of all sources ending with `.css`
+
+`getStylesheets()` - returns a list of all stylesheets and their resolved paths
+
+`getJavascriptSources()` - returns a list of all sources ending with `.js`
+
+`getJavascripts()` - returns a list of all javascripts and their resolved paths
+
+`getImageSources()` - returns a list of all sources ending with `.jpg`, `.jpeg`, `.gif`, `.png`, `.bmp` or `.webp`, 
+
+`getImages()` - returns a list of all images and their resolved paths
