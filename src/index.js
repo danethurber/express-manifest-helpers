@@ -1,5 +1,5 @@
 import fs from 'fs'
-import assign from 'lodash/object/assign'
+import assign from 'lodash/assign'
 
 var manifest
 var options = {}
