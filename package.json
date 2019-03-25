@@ -25,9 +25,10 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
-    "chai": "^2.3.0",
-    "mocha": "^2.2.5",
-    "sinon": "^1.14.1"
+    "@babel/register": "^7.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "sinon": "^7.3.0"
   },
   "dependencies": {
     "lodash": "^4.17.10"
