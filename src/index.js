@@ -1,5 +1,4 @@
 import fs from 'fs'
-import assign from 'lodash/assign'
 
 var manifest
 var options = {}
@@ -94,7 +93,7 @@ export default function(opts) {
   }
 
   manifest = null
-  assign(options, defaults, opts)
+  Object.assign(options, defaults, opts)
 
   return function(req, res, next) {
     res.locals.getSources = getSources
