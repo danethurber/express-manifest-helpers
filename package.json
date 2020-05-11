@@ -1,11 +1,11 @@
 {
   "name": "express-manifest-helpers",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "View helpers to use with an asset manifest",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run compile",
-    "compile": "./node_modules/.bin/babel -d lib/ src/",
+    "compile": "babel src -d lib",
     "test": "mocha"
   },
   "repository": "danethurber/express-manifest-helpers",
@@ -22,10 +22,13 @@
   },
   "homepage": "https://github.com/danethurber/express-manifest-helpers",
   "devDependencies": {
-    "babel": "^5.4.7",
-    "chai": "^2.3.0",
-    "mocha": "^2.2.5",
-    "sinon": "^1.14.1"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "sinon": "^7.3.0"
   },
   "dependencies": {
     "lodash": "^4.17.10"
